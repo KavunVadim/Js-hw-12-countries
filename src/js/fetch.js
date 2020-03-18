@@ -6,6 +6,6 @@ export default function(searchName) {
         })
         .then(data => data)
         .catch(error => {
-            console.log('Error: ', error);
+            console.error('Error: ', error);
         });
 }

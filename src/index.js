@@ -33,13 +33,12 @@ function countrySearch() {
         fetch(searchValue)
             .then(result => {
                 if (result.length === 1) {
-                    renderCountry(result);
-                } else if (result.length > 1 && result.length < 10) {
-                    renderСountries(result);
-                    console.log(result);
-                } else {
-                    setPNotifySettings();
+                    return renderCountry(result);
                 }
+                if (result.length > 1 && result.length < 10) {
+                    return renderСountries(result);
+                }
+                setPNotifySettings();
             })
             .catch(error => {
                 setPNotifySettings1();
