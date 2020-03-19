@@ -35,7 +35,7 @@ function countrySearch() {
                 if (result.length === 1) {
                     return renderCountry(result);
                 }
-                if (result.length > 1 && result.length < 10) {
+                if (result.length > 1 && result.length < 20) {
                     return renderСountries(result);
                 }
                 setPNotifySettings();
